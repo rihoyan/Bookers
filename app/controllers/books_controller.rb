@@ -12,12 +12,13 @@ class BooksController < ApplicationController
 
   def create
     # create bookボタンを押した後に動くアクション
-    book = Book.new(book_params)
-    if book.save
+    @book = Book.new(book_params)
+    if @book.save
        flash[:create] = "Book was successfully created！"
        redirect_to book_path(book)
     else
-       render "index"
+       @books = Book.all
+       render :index
     end
   end
 
@@ -32,10 +33,12 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
-    if book.update(book_params)
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
        flash[:update] = "Book was successfully update！"
        redirect_to book_path(book)
+    else
+       render :edit
     end
   end
 
