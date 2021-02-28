@@ -1,14 +1,23 @@
 <% if flash[:create] %>
-  <p><%= flash[:create] %></p>
+  <p class="flash"><%= flash[:create] %></p>
 <% elsif flash[:update] %>
-  <p><%= flash[:update] %></p>
+  <p class="flash"><%= flash[:update] %></p>
 <% end %>
 
-<h4>title:</h4>
-<p><%= @book.title %></p>
+<div class="show">
+  <div class="show-book">
+    <h5>Title:</h5>
+    <p><%= @book.title %></p>
+  </div>
 
-<h4>Body:</h4>
-<p><%= @book.body %></p>
+  <div class="show-book">
+    <h5>Body:</h5>
+    <p><%= @book.body %></p>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_book_path(@book) %>
-<%= link_to 'Back', index_book_path %>
+<div class="show-link">
+  <%= link_to 'Edit', edit_book_path(@book) %>
+  <p>｜</p>
+  <%= link_to 'Back', index_book_path %>
+</div>

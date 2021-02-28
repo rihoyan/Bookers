@@ -2,6 +2,120 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.top_heading{
-  
+// 全体の文字の種類を設定
+body{
+    font-family: Verdana,Arial,Meiryo,sans-serif;
+    margin-top: 25px;
+    margin-left: 35px;
+    color: #333;
+}
+
+// TOPページ-------------------------------------------
+
+.heading{
+    font-weight: bold;
+}
+
+.top_message{
+    font-size: 13px;
+    margin: 0 65px;
+    line-height: 355%;
+}
+
+strong{
+    font-weight: bold;
+}
+
+// indexページ-------------------------------------------
+
+.index{
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 200%;
+}
+
+.book{
+    color: #333;
+    padding: 0 10px 0 0;
+}
+
+.link{
+    width: 40px;
+    text-align: center;
+}
+
+.form{
+    margin-top: 15px;
+}
+
+.book-form{
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.alert{
+    margin: 15px 0 0;
+    width: 40%;
+    height: 130px;
+    border: 2px solid red;
+    background-color: #f0f0f0;
+}
+
+.errors-count{
+    background-color: #c00;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.alert ul li{
+    font-size: 12px;
+    list-style: square;
+}
+
+.alert ul{
+    padding: 30px 30px 30px 50px;
+}
+
+// showページ-------------------------------------------
+
+.show{
+    margin: 10px 5px 25px 35px;
+}
+
+.show-book{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.show-book > h5{
+    padding-right: 5px;
+}
+
+.show-book > p{
+    font-size: 13px;
+}
+
+.show-link{
+    display: flex;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+// editページ-------------------------------------------
+
+.edit-link{
+    display: flex;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+// flaShメッセージのCSS---------------------------------
+
+.flash{
+    margin: 10px 5px 25px 35px;
+    color: #008000;
+    font-size: 13px;
 }
